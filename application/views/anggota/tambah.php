@@ -1,12 +1,12 @@
 <div class="container-fluid">
-<h2 class="h3 mb-4 text-gray-800">Tambah Anggota</h2>\
+<h2 class="h3 mb-4 text-gray-800">Tambah Anggota</h2>
 
 <div class="card shadow">
     <div class="card body">
-        <form method="post" action="<?= site_url('kategori/simpan'); ?>">
+        <form method="post" action="<?= site_url('anggota/simpan'); ?>">
     <div class="form-group">
         <label>Nama Anggota</label><br>  
-        <input type="text" name="nama_kategori" class="form-control" required> 
+        <input type="text" name="nama_anggota" class="form-control" required> 
 </div>
     <button type="submit" class="btn btn-primary">Simpan</button>
     <a href="<?= site_url('anggota');?>" class="btn btn-secondary">Kembali</a>
