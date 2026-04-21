@@ -3,6 +3,7 @@
 
 <div class="card shadow">
     <div class="card body">
+<<<<<<< HEAD
         <form method="post" action="<?= site_url('anggota/update/'.$anggota->id); ?>">
     <div class="form-group">
         <label>Nama anggoa</label><br>  
@@ -10,6 +11,15 @@
 </div>
     <button type="submit" class="btn btn-primary">update</button>
     <a href="<?= site_url('anggota');?>" class="btn btn-secondary">Kembali</a>
+=======
+        <form method="post" action="<?= site_url('kategori/update/'.$anggota->id); ?>">
+    <div class="form-group">
+        <label>Nama anggota</label><br>  
+        <input type="text" name="nama_kategori" class="form-control" value="<?= $anggota->nama; ?>" required> 
+</div>
+    <button type="submit" class="btn btn-primary">update</button>
+    <a href="<?= site_url('kategori');?>" class="btn btn-secondary">Kembali</a>
+>>>>>>> 5e6079631d59de61ffcbb241390dba022f742ccc
 </form>
             </div>
         </div>

@@ -29,7 +29,7 @@
 
     <div class="form-group mb-3">
         <label>Tanggal Daftar</label>
-        <input type="date" name="tanggal_daftar" class="form-control" required>
+        <input type="date" name="tgl_daftar" class="form-control" required>
     </div>
 
     <div class="form-group mb-3">
