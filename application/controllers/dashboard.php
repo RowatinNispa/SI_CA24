@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowede');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class dashboard extends CI_Controller{
 
@@ -12,6 +12,7 @@ class dashboard extends CI_Controller{
     {
         $data['total_buku']= $this->db->count_all('buku');
         $data['total_anggota']= $this->db->count_all('anggota');
+        $data['total_kategori']= $this->db->count_all('kategori');
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');

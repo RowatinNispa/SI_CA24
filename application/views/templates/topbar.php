@@ -4,7 +4,7 @@
     <i class="fa fa-bars"></i>
 </button>
 
-<ul class="nav-item dropdown no-arrow">
+<ul class="navbar-nav ml-auto">
     <li class="nav-item dropdown no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="mr-2 d-done d-lg-inline text-gray-600 small">

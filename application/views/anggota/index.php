@@ -14,6 +14,7 @@
         <th>Nama</th>
         <th>Telpon</th>
         <th>Email</th>
+        <th>Alamat</th>
         <th>tgl daftar</th>
         <th>Aksi</th>
     </tr>
@@ -25,6 +26,7 @@
             <td><?= $a->nama; ?></td>
             <td><?= $a->no_hp; ?></td>
             <td><?= $a->email; ?></td>
+            <td><?= $a->alamat; ?></td>
             <td><?= $a->tgl_daftar; ?></td>
             <td>
                 <a href="<?= site_url('anggota/edit/'.$a->id); ?>" class="btn btn-warning btn-sm">Edit</a>

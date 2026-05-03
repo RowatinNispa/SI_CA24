@@ -32,14 +32,6 @@
         <input type="date" name="tgl_daftar" class="form-control" required>
     </div>
 
-    <div class="form-group mb-3">
-        <label>Status</label>
-        <select name="status" class="form-control">
-            <option value="aktif">Aktif</option>
-            <option value="tidak">Tidak</option>
-        </select>
-    </div>
-
     <button type="submit" class="btn btn-primary">Simpan</button>
     <a href="<?= site_url('anggota');?>" class="btn btn-secondary">Kembali</a>
 

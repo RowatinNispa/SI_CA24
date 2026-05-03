@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Anggota extends CI_Controller {
+class anggota extends CI_Controller {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Anggota_model');
+        $this->load->model('anggota_model');
     }
 
     public function index()
     {
-        $data['anggota'] = $this->Anggota_model->get_all();
+        $data['anggota'] = $this->anggota_model->get_all();
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
@@ -33,28 +33,27 @@ class Anggota extends CI_Controller {
     public function simpan()
     {
         $data = [
-            'nomor_anggota' => $this->input->post('nomor'),
-            'nama' => $this->input->post('nama'),
-            'alamat' => $this->input->post('alamat'),
-            'no_hp' => $this->input->post('no_hp'),
-            'email' => $this->input->post('email'),
-            'tgl_daftar' => $this->input->post('tgl_daftar'),
-            'status' => 'Aktif'
-        ];
+        'nama' => $this->input->post('nama'),
+        'alamat' => $this->input->post('alamat'),
+        'no_hp' => $this->input->post('telepon'),
+        'email' => $this->input->post('email'),
+        'alamat' => $this->input->post('alamat'),
+        'tgl_daftar' => $this->input->post('tgl_daftar')
+    ];
         
-        $this->Anggota_model->insert($data);
+        $this->anggota_model->insert($data);
         redirect('index.php/anggota');
     }
 
     public function hapus($id)
     {
-        $this->Anggota_model->delete($id);
+        $this->anggota_model->delete($id);
         redirect('index.php/anggota');
     }
 
     public function edit($id)
     {
-        $data['anggota'] = $this->Anggota_model->get_by_id($id);
+        $data['anggota'] = $this->anggota_model->get_by_id($id);
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
@@ -66,16 +65,15 @@ class Anggota extends CI_Controller {
     public function update($id)
     {
         $data = [
-            'id' => $this->input->post('id'),
             'nama' => $this->input->post('nama'),
             'alamat' => $this->input->post('alamat'),
-            'no_hp' => $this->input->post('no_hp'),
+            'no_hp' => $this->input->post('telepon'),
+            'alamat' => $this->input->post('alamat'),
             'email' => $this->input->post('email'),
             'tgl_daftar' => $this->input->post('tgl_daftar'),
-            'status' => $this->input->post('status')
         ];
 
-        $this->Anggota_model->update($id, $data);
+        $this->anggota_model->update($id, $data);
         redirect('index.php/anggota');
     }
 }

@@ -6,7 +6,7 @@
 <script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
 <script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
 <script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
-<script src="<?= base_url('assets/vendo/chart.js/Chart.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/chart.js/Chart.min.js');?>"></script>
 <script src="<?= base_url('assets/js/sb-admin-2.min.js');?>"></script>
 
 <script>
@@ -25,24 +25,28 @@
     });
 </script>
 <script>
-    var ctx= document.getElementById("chartDashboard");
+    var ctx= document.getElementById("chartDashboard").getContext('2d');
     var chart= new Chart(ctx,{
         type: 'bar',
         data: {
-            labels:['Buku'.'Anggota'],
-            dataset:[{
-                labels:'Jumlah Data',
-                data:[
-                <?=$tota_buku;?>,
-                <?=$total_anggota;?>
+            labels:['Buku','Anggota','Kategori'],
+            datasets: [{
+                label: 'Jumlah Data',
+                data: [
+                    <?= $total_buku;?>,
+                    <?= $total_anggota;?>,
+                    <?= $total_kategori;?>
                 ],
-                backgroundColor;[
-                    '#4e73df',
-                    '#1cc88a'                
-                ]
+                backgroundColor: [
+                    '#c914da',
+                    '#000000',
+                    'rgb(255, 7, 7)'
+                ],
+                barPercentage: 0.5,
+                categoryPercentage: 0.5
             }]
         },
-        option:{
+        options:{
             responsive: true,
             scales:{
                 yAxes:[{
@@ -53,3 +57,4 @@
             }
         }
     });
+</script>
