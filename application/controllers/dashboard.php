@@ -10,14 +10,24 @@ class dashboard extends CI_Controller{
 
     public function index()
     {
-        $data['total_buku']= $this->db->count_all('buku');
-        $data['total_anggota']= $this->db->count_all('anggota');
-        $data['total_kategori']= $this->db->count_all('kategori');
+        $data['total_produk'] =
+        $this->db->count_all('produk');
+        $data['total_pelanggan'] =
+        $this->db->count_all('pelanggan');
+        $data['total_sales'] =
+        $this->db->count_all('sales');
 
+        $data['total_order'] =
+        $this->db->count_all('sales_order');
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
         $this->load->view('templates/topbar');
-        $this->load->view('dashboard/index',$data);
+
+        $this->load->view(
+            'dashboard/index',
+            $data
+        );
+
         $this->load->view('templates/footer');
     }
 }

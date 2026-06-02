@@ -29,13 +29,13 @@
     var chart= new Chart(ctx,{
         type: 'bar',
         data: {
-            labels:['Buku','Anggota','Kategori'],
+            labels:['pelanggan','produk','sales'],
             datasets: [{
                 label: 'Jumlah Data',
                 data: [
-                    <?= $total_buku;?>,
-                    <?= $total_anggota;?>,
-                    <?= $total_kategori;?>
+                    <?= $total_pelanggan;?>,
+                    <?= $total_produk;?>,
+                    <?= $total_sales;?>
                 ],
                 backgroundColor: [
                     '#c914da',
